@@ -1,0 +1,164 @@
+    
+    <!-- Newsletter -->
+
+	<div class="newsletter">
+
+			<div class="characteristics">
+					<div class="container">
+						<div class="row">
+			
+							<!-- Char. Item -->
+							<div class="col-lg-3 col-md-6 char_col">
+								
+								<div class="char_item d-flex flex-row align-items-center justify-content-start">
+									<div class="char_icon"><img src="images/char_1.png" alt=""></div>
+									<div class="char_content">
+										<div class="char_title">Free Delivery</div>
+										<div class="char_subtitle">from $50</div>
+									</div>
+								</div>
+							</div>
+			
+							<!-- Char. Item -->
+							<div class="col-lg-3 col-md-6 char_col">
+								
+								<div class="char_item d-flex flex-row align-items-center justify-content-start">
+									<div class="char_icon"><img src="images/char_2.png" alt=""></div>
+									<div class="char_content">
+										<div class="char_title">Free return</div>
+										<div class="char_subtitle">within 30 days</div>
+									</div>
+								</div>
+							</div>
+			
+							<!-- Char. Item -->
+							<div class="col-lg-3 col-md-6 char_col">
+								
+								<div class="char_item d-flex flex-row align-items-center justify-content-start">
+									<div class="char_icon"><img src="images/char_3.png" alt=""></div>
+									<div class="char_content">
+										<div class="char_title">Online payments</div>
+										<div class="char_subtitle">using Stripe</div>
+									</div>
+								</div>
+							</div>
+			
+							<!-- Char. Item -->
+							<div class="col-lg-3 col-md-6 char_col">
+								
+								<div class="char_item d-flex flex-row align-items-center justify-content-start">
+									<div class="char_icon"><img src="images/char_4.png" alt=""></div>
+									<div class="char_content">
+										<div class="char_title">Best prices</div>
+										<div class="char_subtitle">from $10</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	</div>	
+	
+    <!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 footer_col">
+					<div class="footer_column footer_contact">
+						<div class="logo_container">
+							<div class="logo"><a href="#">WebOnline</a></div>
+						</div>
+						<div class="footer_title">Got Question? View our github page</div>
+						<div class="footer_phone"><a href="http://github.com/DmitryVF">DmitryVF</a></div>
+						<div class="footer_contact_text">
+							<p>Making websites for your needs</p>
+							<p></p>
+						</div>
+						<div class="footer_social">
+							<ul>
+								<li><a href="http://github.com/DmitryVF"><i class="fab fa-github"></i></a></li>
+								<!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="#"><i class="fab fa-google"></i></a></li>
+								<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-2 offset-lg-2">
+					<div class="footer_column">
+						<div class="footer_title">Find it Fast</div>
+						<ul class="footer_list">
+                            <li ng-repeat="cat in cats1">
+								<a href="#/category/{{cat._id}}">{{cat._id}}</a>
+                            </li>
+						</ul>
+						<!-- <div class="footer_subtitle">Gadgets</div> -->
+						
+					</div>
+				</div>
+
+				<div class="col-lg-2">
+					<div class="footer_column">
+						<div class="footer_title"> &nbsp</div>
+						<ul class="footer_list">
+                            <li ng-repeat="cat in cats2">
+								<a href="#/category/{{cat._id}}">{{cat._id}}</a>
+                            </li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-2">
+					<div class="footer_column">
+						<div class="footer_title">Pages</div>
+						<ul class="footer_list">
+							<li><a href="#">Home</a></li>
+							<li><a href="#/category/Books">Categories</a></li>
+							<li><a href="#/blog_single">Blog</a></li>
+							<li ng-show="user.user"><a href="#/likes">My wishes</a></li>
+							<li ng-show="!user.user" uib-popover="Please login to view your Wishes" popover-trigger="'mouseenter'">
+								<a href="#/login">My wishes</a>
+							</li>
+							<li ng-show="user.user"><a href="#/checkout">Cart</a></li>
+							<li ng-show="!user.user" uib-popover="Please login to view your Cart" popover-trigger="'mouseenter'">
+								<a href="#/login">Cart</a>
+							</li>
+						    <li><a href="#/about">Contacts</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- Copyright -->
+
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					
+					<div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+						<div class="copyright_content"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</div>
+						<!-- <div class="logos ml-sm-auto">
+							<ul class="logos_list">
+								<li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
+								<li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
+								<li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
+								<li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- </div> -->

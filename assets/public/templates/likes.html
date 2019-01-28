@@ -1,0 +1,65 @@
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/cart_styles.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/cart_responsive.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/liked_styles_custom.css"> -->
+<search-bar></search-bar>
+<main-nav></main-nav>
+
+
+<!-- Cart -->
+
+  <div class="cart_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="cart_container">
+            <div class="cart_title">Whishlist</div>
+            <div ng-repeat="item in w" class="cart_items">
+              <ul class="cart_list">
+                <li  class="cart_item clearfix">
+                  <!-- {{item}} -->
+                  <div class="cart_item_image"><img ng-src="{{item.pictures[0]}}" alt=""></div>
+                  <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                    <div class="cart_item_name cart_info_col">
+                      <div class="cart_item_title">Name</div>
+                      <div class="cart_item_text"><a ng-href="#/product/{{item._id}}">{{item.name}}</a></div>
+                    </div>
+                    <div class="cart_item_quantity cart_info_col">
+                      <div class="cart_item_title"><div ng-click="toggle_like(item)" class="product_fav active"><i class="{{item.liked}} fa-heart"  ></i></div></div>
+                      <div class="cart_item_text">&nbsp;</div>
+
+                    </div>
+                    <div class="cart_item_price cart_info_col">
+                      <div class="cart_item_title">Price</div>
+                      <div class="cart_item_text">{{item.displayPrice}}</div>
+                    </div>
+                  </div>
+                  <!-- <div class="cart_item_total cart_info_col">
+                      <div class="cart_item_title">Total</div>
+                      <div class="cart_item_text">{{item.totalPrice}}</div>
+                  </div> -->
+                </li>
+                
+              </ul>
+            </div>
+            
+
+            <div class="cart_buttons">
+              <button ng-click="updateLikes()" type="button" class="button cart_button_clear">Update Likes</button>
+             <!--  <button ng-click="checkout()" type="button" class="button cart_button_checkout">Check Out</button> -->
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  
+
+<!-- {{user.user.data.cart}} -->
+<recently-viewed></recently-viewed>
+<footer-block></footer-block>

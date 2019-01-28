@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    
+    "browserify": "compiles Node.js style (with requare()) JavaScript into a output file",
+    "browserify": "Browserify lets you organize your JavaScript into multiple files in Node.js style",
+    
+    "browserify": "10.2.3",
+    "gulp": "3.8.11",
+    "gulp-browserify": "plug-in for Gulp that runs Browserify",
+    "gulp-browserify": "0.5.1",
+
+    "karma": " tool for launching browsers to test client-side JavaScript ",
+    "karma": " With Karma, you'd be able to write tests in Mocha and run them in any browser ",
+    "karma": "karma.local.conf.js - configuration file",
+    
+    "karma": "0.12.16",
+    "karma-chai": "plugin that includes the Chai assertion framework (assert() functon)",
+    "karma-chai": "0.1.0",
+    
+    "karma-chrome-launcher": "enables Karma to launch Google Chrome browsers locally.",
+    "karma-chrome-launcher": "0.1.4",
+    
+    "karma-mocha": "plugin that enables Karma to run Mocha tests",
+    "karma-mocha": "0.1.4",
+    
+
+    
+
+    "http-status": "0.1.8",
+    "underscore": "1.5.2"
+  }
+}

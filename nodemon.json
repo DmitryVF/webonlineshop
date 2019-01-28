@@ -1,0 +1,4 @@
+{
+  "ignore": ["test.js","assets/*", "assets/admin/*", "assets/javascripts/*", "assets/tests/*", "assets/public/bin/*", "assets/public/bin/*","data/*"],
+  "ext": "js json html"
+}

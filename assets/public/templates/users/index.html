@@ -1,0 +1,24 @@
+<md-content layout="row" flex layout-align="space-around center" layout-padding ng-controller="AuthCtrl" ng-class="($state.is('auth.register')) ? 'register-form' : ''">
+  <!-- <md-card flex=40></md-card> -->
+  <div class="container">
+  <div class = "social-login-link row">
+    <md-card-actions layout="row" layout-align="left">
+      <ul class="social">
+        <li ng-repeat="(key, val) in socialButtons" class="social_icon social_icon_{{key}}">
+        <span>  </span>
+          <a target="_self" ng-href="/api/auth/{{key}}" class="">
+            <span class="text-capitalize">Log in with {{key}}</span>
+          </a> 
+        </li>
+      </ul>
+      </md-card-actions>
+  </div>
+  <div class="row">
+    <!-- <span flex></span> -->
+      <md-button ui-sref="register">Register</md-button>
+      <md-button ui-sref="signin">Sign in</md-button>
+      <!-- <a ng-href="#/login">Login</a> -->
+  </div>
+  </div>
+</md-content>
+  

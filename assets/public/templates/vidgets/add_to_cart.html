@@ -1,0 +1,34 @@
+<button ng-show="user.user" ng-click="addToCart(product,quant);" class="product_cart_button">
+	<span ng-show="!success">
+    <i class="fa fa-cart-plus"></i>
+    Add to Cart
+  </span>
+  <span ng-show="success">
+    <i class="fa fa-check"></i>
+    Added
+  </span>
+  <!-- Add to Cart -->
+
+</button>
+
+<button ng-show="!user.user" class="product_cart_button">
+  
+    <i class="fa fa-cart-plus"></i>
+    <a style="color:white;" href="#/login">Add to Cart</a>
+  
+</button>
+
+
+
+<!-- 
+<div class="cart-button" ng-click="addToCart(product);">
+  <div ng-show="!success">
+    <i class="fa fa-cart-plus"></i>
+    Add
+  </div>
+  <div ng-show="success">
+    <i class="fa fa-check"></i>
+    Added
+  </div>
+</div>
+ -->

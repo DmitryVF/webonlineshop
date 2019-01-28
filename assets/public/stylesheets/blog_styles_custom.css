@@ -1,0 +1,31 @@
+
+.cat_menu_container ul
+{
+	display: block;
+	visibility: hidden;
+}
+
+.cart_item_text a{
+	color: black;
+}
+.cart_item_text a:hover{
+	color: blue;
+}
+
+.home_background{
+	/*top: -10px;*/
+    background-position: center;
+    background-size: cover;	
+}
+.home_overlay{
+	opacity: 0.5;
+	/*top: -10px;*/
+}
+.home{
+	height: 260px;
+	margin-top: -10px;
+}
+.burger_menu_show {
+    margin-top: -15px;
+    margin-bottom: 20px;
+}

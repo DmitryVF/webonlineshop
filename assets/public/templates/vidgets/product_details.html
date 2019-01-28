@@ -1,0 +1,68 @@
+<!-- Single Product -->
+
+<div class="single_product">
+  <div class="container">
+    <div class="row">
+
+      <!-- Images -->
+      <div class="col-lg-2 order-lg-1 order-2">
+        <ul class="image_list" >
+          <li ng-click= "image_selected =product.pictures[0]"><img ng-src="{{product.pictures[0]}}" alt=""></li>
+          <li ng-click= "image_selected =product.pictures[1]"><img ng-src="{{product.pictures[1]}}" alt=""></li>
+          <li ng-click= "image_selected =product.pictures[2]"><img ng-src="{{product.pictures[2]}}" alt=""></li>
+        </ul>
+      </div>
+
+      <!-- Selected Image -->
+      <div class="col-lg-5 order-lg-2 order-1">
+        <div class="image_selected"><img  ng-src="{{image_selected}}" alt=""></div>
+      </div>
+
+      <!-- Description -->
+      <div class="col-lg-5 order-3">
+        <div class="product_description">
+          <div class="product_category"><a ng-href="#/category/{{product.category.ancestors[0]}}">{{product.category.ancestors[0]}}</a></div>
+          <div class="product_name">{{product.name}}</div>
+
+          <div class="rating_r {{prd.userrating}} product_rating">
+                                        <i class = "starrating" ng-repeat="star in stars" 
+                                        ng-Mouseleave = "leave_stars(star,prd)" ng-Mouseover="hover_stars(star,prd)" ng-click="set_stars(star,prd)"></i></div>
+          
+          <div class="order_info d-flex flex-row">
+            <!-- <form action="#"> -->
+            <div>
+              <div class="clearfix" style="z-index: 1000;">
+
+                <!-- Product Quantity -->
+                <div class="product_quantity clearfix">
+                  <span>Quantity: </span>
+                  <input ng-disabled="true" style = "background: transparent;" id="quantity_input" type="text" pattern="[1-9]*" value={{quant}}>
+                  <div class="quantity_buttons" ng-init = "quant = 1">
+                    <div id="quantity_inc_button" ng-click = "quant=quant+1;" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+                    <div id="quantity_dec_button" ng-click = "quant= quant <= 1 ? 1 : quant=quant-1;" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+
+                
+
+              </div>
+              
+              <div class="product_price">{{product.displayPrice}}</div>
+              <div class="button_container">
+                <add-to-cart></add-to-cart>
+                <!-- <button type="button" class="button cart_button">Add to Cart</button> -->
+                <div ng-click="toggle_like(prd)" class="product_fav active"><i class="{{prd.liked}} fa-heart"  ></i></div>
+                <!-- <div class="product_fav"><i class="fas fa-heart"></i></div> -->
+              </div>
+            </div>  
+            <!-- </form> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div> -->
+

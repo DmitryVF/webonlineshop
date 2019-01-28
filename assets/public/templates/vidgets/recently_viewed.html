@@ -1,0 +1,70 @@
+
+
+<div class="viewed">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="viewed_title_container">
+                        <!-- <div class="new_arrivals_title">Hot Best Sellers</div> -->
+                    <div class="viewed_title " ng-show="!user.user" > <a  ng-href="#/login" uib-popover="Please login to see your recently viewed products" popover-trigger="'mouseenter'" >Recently Viewed</a> <span> | </span>Recommended</div>
+                    <div class="viewed_title " ng-show="user.user && !len"> <a  ng-href="#/login" uib-popover="You didn't see any products details yet" popover-trigger="'mouseenter'" >Recently Viewed</a> <span> | </span>Recommended</div>
+                    <div class="viewed_title " ng-show="user.user && len" > Recently Viewed</div>
+            
+                </div>
+
+                <div class="viewed_slider_container">
+                    
+                    <!-- Recently Viewed Slider -->
+                  <div class="carousel-demo owl-carousel owl-theme viewed_slider">
+                           
+					<ul style="display:block; height:265px; "  rn-carousel-locked rn-carousel  rn-carousel-auto-slide="10" rn-carousel-index="carouselIndex4"
+                                    rn-carousel-buffered rn-carousel-controls-allow-loop class="carousel1 " >
+                        <li class="banner_2_item " style="display:block; " >     
+                            <div class="container ">	
+                                <div class="row viewed_list" >       	
+                                    <!-- Recently Viewed Item --> 
+                                    <div ng-repeat="prd in v track by $index" class="owl-item col-lg-2 col-md-3 col-sm-4 col-6">
+                                        <div class="viewed_item flex-column align-items-center justify-content-center text-center">
+                                            <div class="bestsellers_image"><img ng-src="{{prd.pictures[0]}}" alt=""></div>
+                                            <div class="viewed_content text-center">
+                                                <div class="viewed_price">{{prd.displayPrice}}</div>
+                                                <div class="viewed_name"><a style= "text-overflow: ellipsis;" ng-href="#/product/{{prd._id}}">{{prd.name}}</a></div>
+                                            </div>
+                                            <ul class="item_marks">
+                                                <!-- <li class="item_mark item_discount">-25%</li> -->
+                                                <li class="item_mark item_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </li>
+                         <li class="banner_2_item " style="display:block; " >     
+                            <div class="container ">	
+                                <div class="row viewed_list" >       	
+                                    <!-- Recently Viewed Item --> 
+                                    <div ng-repeat="prd in v track by $index" class="owl-item col-lg-2 col-md-3 col-sm-4 col-6">
+                                        <div class="viewed_item flex-column align-items-center justify-content-center text-center">
+                                            <div class="bestsellers_image"><img ng-src="{{prd.pictures[0]}}" alt=""></div>
+                                            <div class="viewed_content text-center">
+                                                <div class="viewed_price">{{prd.displayPrice}}</div>
+                                                <div class="viewed_name"><a style= "text-overflow: ellipsis;" ng-href="#/product/{{prd._id}}">{{prd.name}}</a></div>
+                                            </div>
+                                            <ul class="item_marks">
+                                                <!-- <li class="item_mark item_discount">-25%</li> -->
+                                                <li class="item_mark item_new">new</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </li>
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- </div> -->

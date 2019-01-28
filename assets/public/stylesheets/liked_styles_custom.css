@@ -1,0 +1,55 @@
+
+.cat_menu_container ul
+{
+	display: block;
+	visibility: hidden;
+}
+
+.cart_item_text a{
+	color: black;
+}
+.cart_item_text a:hover{
+	color: blue;
+}
+
+.product_fav
+{
+	/*margin-left: 100px; */
+	/*position: relative;
+	left: 185px;
+	top:-40px;*/
+	position: relative;
+	left: 0px;
+	top: 12px;
+
+	display: inline-block !important;
+	visibility: visible !important;
+	opacity: 1;
+	z-index: 1000000;
+	width: 36px; 
+	height: 36px;
+	background: #FFFFFF;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 36px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.product_fav:hover
+{
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+}
+.product_fav i
+{
+	line-height: 36px;
+	color: #cccccc;
+}
+.product_fav.active i
+{
+	color: #df3b3b;
+}

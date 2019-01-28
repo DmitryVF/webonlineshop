@@ -1,0 +1,30 @@
+
+<header class="header">
+<div class="top_bar">
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex flex-row">
+        <div class="top_bar_contact_item"><div class="top_bar_icon"><a href="#"><img 
+          /*style =" margin-top:13px; width:30px" */
+          src="images/card-full.svg" alt=""></a></div></div>
+        <div class="top_bar_content ml-auto">
+          <div class="top_bar_menu">
+            
+          </div>
+          <div class="top_bar_user">
+            
+            <div class="user_icon" ng-hide="user.user"><img ng-hide="user.user" src="images/user.svg" alt=""></div>
+            <div><a ng-show="user.user">Signed in as {{user.user.name}}</a>
+                 <a ng-show="!user.user" ng-href="#/register">Register</a>
+            </div>
+            <div><a ng-show="!user.user" ng-href="#/login">Sign in</a></div>
+            <div class="user_icon" ng-show="user.user"><a ng-href="#/checkout"><i class="fa fa-shopping-cart"></i></a></div>
+            <div class="user_icon" ng-show="user.user"><img ng-show="user.user.profile.picture" ng-src="{{user.user.profile.picture}}"/></div>
+            <div ng-show="user.user"> <a href="#" ng-click="signout()">Logout</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>		
+</div>
+</header>

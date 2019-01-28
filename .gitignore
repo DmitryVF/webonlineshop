@@ -1,0 +1,22 @@
+# Node build artifacts
+node_modules
+npm-debug.log
+
+# Config
+config.json
+
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+#mongo files
+database/db/*
+database/*
+
+#compiled files
+assets/public/bin/*

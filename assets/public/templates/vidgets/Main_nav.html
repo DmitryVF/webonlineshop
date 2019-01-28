@@ -1,0 +1,118 @@
+
+		<!-- Main Navigation -->
+
+		<nav class="main_nav" >
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						
+						<div class="main_nav_content d-flex flex-row">
+
+							<!-- Categories Menu -->
+
+							<div class="cat_menu_container">
+								<div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+									<div class="cat_burger"><span></span><span></span><span></span></div>
+									<div class="cat_menu_text">categories</div>
+								</div>
+								<ul class="cat_menu" 	>
+									<li class="hassubs" ng-repeat="category in categories" ng-if="!category.parent" >
+										<div><a class="inline" ng-href="#/category/{{category._id}}">{{category._id}}</a></div>
+										<ul id="{{category._id}}"></ul>
+										<!-- <a ng-Mouseleave="remove_sub(category)" ng-mouseover="insert_sub(category)" id="{{category._id}}" ng-href="#/category/{{category._id}}">{{category._id}}<i class="fas fa-chevron-right"></i></a> -->
+									</li>
+								</ul>
+							</div>
+
+							<!-- Main Nav Menu -->
+
+							<div class="main_nav_menu ml-auto">
+								<ul class="standard_dropdown main_nav_dropdown">
+									<li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li class="hassubs">
+										<a href="#">Pages<i class="fas fa-chevron-down"></i></a>
+										<ul>
+											<li><a href="#/category/Books">Categories<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="#/blog_single">Blog<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="#/likes">My wishes<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="#/checkout">Cart<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="#/about">Contacts<i class="fas fa-chevron-down"></i></a></li>
+										</ul>
+									</li>
+									<li><a href="#/blog_single">Blog<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="#/about">About<i class="fas fa-chevron-down"></i></a></li>
+								</ul>
+							</div>
+
+							<!-- Menu Trigger -->
+
+							<div class="menu_trigger_container ml-auto">
+								<div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+									<div class="menu_burger" ng-click="burger_toggle('menu_content')">
+										<div class="menu_trigger_text">menu</div>
+										<div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<!-- Menu -->
+
+		<div class="page_menu">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<!-- style="height: auto;" -->
+						<div id ="menu_content" class="page_menu_content" >
+							
+							<!-- <div class="page_menu_search">
+								<form action="#">
+									<input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
+								</form>
+							</div> -->
+							<ul class="page_menu_nav">
+								<li class="page_menu_item">
+									<a href="/">Home<i ></i></a>
+								</li>
+								<li class="page_menu_item has-children">
+									<a style="cursor: pointer; color: white;" ng-click="burger_toggle('menu_selection')">Pages<i class="fa fa-angle-down"></i></a>
+									<ul id="menu_selection" class="page_menu_selection">
+										<li><a href="#/category/Books">Categories<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#/blog_single">Blog<i class="fa fa-angle-down"></i></a></li>
+										
+										<li ng-show="user.user"><a href="#/likes">My wishes<i class="fa fa-angle-down"></i></a></li>
+										<li ng-show="!user.user"><a href="#/login">My wishes<i class="fa fa-angle-down"></i></a></li>
+
+										<li ng-show="user.user"><a href="#/checkout">Cart<i class="fa fa-angle-down"></i></a></li>
+										<li ng-show="!user.user"><a href="#/login">Cart<i class="fa fa-angle-down"></i></a></li>
+										
+										<li><a href="#/about">Contacts<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item">
+										<a href="#/blog_single"      >Blog<i class="fa"></i></a>
+									</li>
+								<li class="page_menu_item">
+									<a href="#/about"      >About<i class="fa fa-angle-down"></i></a>
+								</li>
+							</ul>
+							
+							<!-- <div class="menu_contact">
+								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38 068 005 3570</div>
+								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+	
+
+	

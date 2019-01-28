@@ -1,0 +1,304 @@
+	<!-- Best Sellers -->
+	
+
+	<div class="best_sellers">
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="tabbed_container">
+						<div class="tabs clearfix tabs-right">
+							<div class="new_arrivals_title">Hot Best Sellers</div>
+							<ul class="clearfix">
+								<li ng-repeat="tab in tabs" ng-click="toggle_tab($index)" 
+								    ng-class="tab.status">{{tab.name}}</li>
+							
+							</ul>
+							<div class="tabs_line"><span></span></div>
+						</div>
+
+						<div class="bestsellers_panel panel" ng-init="num = 0;" ng-show="num == index">
+							 <!-- Top of the week Slider -->
+							<div class="carousel-demo" >
+								<ul style="display:block; height:30vw; "  rn-carousel rn-carousel-index="carouselIndex3"  rn-carousel-pause-on-hover
+									rn-carousel-buffered class="carousel2 bestsellers">
+									<li class="banner_2_item" style="display:block; " >
+										<div class="banner_2_item">
+											<div class="banner_2_content">
+												<div class="container ">	
+													<div class="row " >
+														<!-- Best Sellers Item -->
+														<div ng-repeat="prd in top0" class=" col-lg-4 col-md-6 col-sm-12">
+															<div class="bestsellers_item discount">
+																<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+																	<div class="bestsellers_image"><img ng-src="{{prd.pictures[0]}}" alt=""></div>
+																		<div class="bestsellers_content">
+																			<div class="bestsellers_category"><a ng-href="#/category/{{prd.category.ancestors[0]}}">{{prd.category.ancestors[0]}}</a></div>
+																			<div class="bestsellers_name"><a ng-href="#/product/{{prd._id}}">{{prd.name}}</a></div>
+																			<div class="rating_r {{prd.userrating}} bestsellers_rating">
+																				<i class = "starrating" ng-repeat="star in stars" 
+																				ng-Mouseleave = "leave_stars_t(star,prd)" ng-Mouseover="hover_stars_t(star,prd)" ng-click="set_stars_t(star,prd)"></i></div>
+																			<div class="bestsellers_price discount">{{prd.displayPrice}}<span></span></div>
+																		</div>
+																</div>
+																<div class="bestsellers_fav active"><i class="{{prd.liked}} fa-heart"  ng-click="toggle_like_t(prd)"></i></div>
+																<ul class="bestsellers_marks">
+																	<!-- <li class="bestsellers_mark bestsellers_discount">-25%</li> -->
+																	<li class="bestsellers_mark bestsellers_new">new</li>
+																</ul>
+															</div>
+ 														</div>
+													</div>	
+												</div>
+											</div>
+										</div>		
+					
+										<!-- #{{ slide.id }} -->
+					
+									</li>
+
+									<li class="banner_2_item" style="display:block; " >
+										<div class="banner_2_item">
+											<div class="banner_2_content">
+												<div class="container ">	
+													<div class="row " >
+														<!-- Best Sellers Item -->
+														<div ng-repeat="prd in top1" class=" col-lg-4 col-md-6 col-sm-12">
+															<div class="bestsellers_item discount">
+																<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+																	<div class="bestsellers_image"><img ng-src="{{prd.pictures[0]}}" alt=""></div>
+																		<div class="bestsellers_content">
+																			<div class="bestsellers_category"><a ng-href="#/category/{{prd.category.ancestors[0]}}">{{prd.category.ancestors[0]}}</a></div>
+																			<div class="bestsellers_name"><a ng-href="#/product/{{prd._id}}">{{prd.name}}</a></div>
+																			<div class="rating_r {{prd.userrating}} bestsellers_rating">
+																				<i class = "starrating" ng-repeat="star in stars" 
+																				ng-Mouseleave = "leave_stars_t(star,prd)" ng-Mouseover="hover_stars_t(star,prd)" ng-click="set_stars_t(star,prd)"></i></div>
+																			<div class="bestsellers_price discount">{{prd.displayPrice}}<span></span></div>
+																		</div>
+																</div>
+																<div class="bestsellers_fav active"><i class="{{prd.liked}} fa-heart"  ng-click="toggle_like_t(prd)"></i></div>
+																<ul class="bestsellers_marks">
+																	<!-- <li class="bestsellers_mark bestsellers_discount">-25%</li> -->
+																	<li class="bestsellers_mark bestsellers_new">new</li>
+																</ul>
+															</div>
+ 														</div>
+													</div>	
+												</div>
+											</div>
+										</div>		
+										<!-- #{{ slide.id }} -->
+									</li>
+									
+								</ul>
+								<div class= 'container' ></div>
+								<div class= 'row' >
+               						 <div class = 'col-xs-2 col-md-4'></div>
+                					 <div class = 'col-xs-4'>
+										<div class="rn-carousel-indicator custom-indicator banner_2_dots" 
+										style = "position:relative; left:150px; bottom:-25px;">
+											<div ng-repeat="slide in slides3" ng-class="{active: $index==$parent.carouselIndex3}" ng-click="$parent.carouselIndex3 = $index"
+												class="owl-dot active" style = "border:none; outline: none;">
+												<span></span>
+											</div>
+										</div>
+										<!-- <div class = 'col-sm-4'>....</div>	 -->
+									</div>
+								</div>	
+							</div>	
+						</div>
+
+							
+
+						<div class="bestsellers_panel panel" ng-init="num1 = 1;" ng-show="num1 == index">
+
+							<!-- Most liked Slider -->
+
+							<div class="carousel-demo" >
+								<ul style="display:block; height:30vw; "  rn-carousel rn-carousel-index="carouselIndex31" rn-carousel-pause-on-hover
+									rn-carousel-buffered class="carousel2 bestsellers">
+									<li class="banner_2_item" style="display:block; " >
+										<div class="banner_2_item">
+											<div class="banner_2_content">
+												<div class="container ">	
+													<div class="row " >
+														<!-- Best Sellers Item -->
+														<div ng-repeat="prd in liked0" class=" col-lg-4 col-md-6 col-sm-12">
+															<div class="bestsellers_item discount">
+																<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+																	<div class="bestsellers_image"><img ng-src="{{prd.pictures[0]}}" alt=""></div>
+																		<div class="bestsellers_content">
+																			<div class="bestsellers_category"><a ng-href="#/category/{{prd.category.ancestors[0]}}">{{prd.category.ancestors[0]}}</a></div>
+																			<div class="bestsellers_name"><a ng-href="#/product/{{prd._id}}">{{prd.name}}</a></div>
+																			<div class="rating_r {{prd.userrating}} bestsellers_rating">
+																				<i class = "starrating" ng-repeat="star in stars" 
+																				ng-Mouseleave = "leave_stars_l(star,prd)" ng-Mouseover="hover_stars_l(star,prd)" ng-click="set_stars_l(star,prd)"></i></div>
+																			<div class="bestsellers_price discount">{{prd.displayPrice}}<span></span></div>
+																		</div>
+																</div>
+																<div class="bestsellers_fav active"><i class="{{prd.liked}} fa-heart"  ng-click="toggle_like_t(prd)"></i></div>
+																<ul class="bestsellers_marks">
+																	<!-- <li class="bestsellers_mark bestsellers_discount">-25%</li> -->
+																	<li class="bestsellers_mark bestsellers_new">new</li>
+																</ul>
+															</div>
+ 														</div>
+													</div>	
+												</div>
+											</div>
+										</div>		
+					
+										<!-- #{{ slide.id }} -->
+					
+									</li>
+
+									<li class="banner_2_item" style="display:block; " >
+										<div class="banner_2_item">
+											<div class="banner_2_content">
+												<div class="container ">	
+													<div class="row " >
+														<!-- Best Sellers Item -->
+														<div ng-repeat="prd in liked1" class=" col-lg-4 col-md-6 col-sm-12">
+															<div class="bestsellers_item discount">
+																<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+																	<div class="bestsellers_image"><img ng-src="{{prd.pictures[0]}}" alt=""></div>
+																		<div class="bestsellers_content">
+																			<div class="bestsellers_category"><a ng-href="#/category/{{prd.category.ancestors[0]}}">{{prd.category.ancestors[0]}}</a></div>
+																			<div class="bestsellers_name"><a ng-href="#/product/{{prd._id}}">{{prd.name}}</a></div>
+																			<div class="rating_r {{prd.userrating}} bestsellers_rating">
+																				<i class = "starrating" ng-repeat="star in stars" 
+																				ng-Mouseleave = "leave_stars_l(star,prd)" ng-Mouseover="hover_stars_l(star,prd)" ng-click="set_stars_l(star,prd)"></i></div>
+																			<div class="bestsellers_price discount">{{prd.displayPrice}}<span></span></div>
+																		</div>
+																</div>
+																<div class="bestsellers_fav active"><i class="{{prd.liked}} fa-heart"  ng-click="toggle_like_t(prd)"></i></div>
+																<ul class="bestsellers_marks">
+																	<!-- <li class="bestsellers_mark bestsellers_discount">-25%</li> -->
+																	<li class="bestsellers_mark bestsellers_new">new</li>
+																</ul>
+															</div>
+ 														</div>
+													</div>	
+												</div>
+											</div>
+										</div>		
+										<!-- #{{ slide.id }} -->
+									</li>
+									
+								</ul>
+								<div class= 'container' ></div>
+								<div class= 'row' >
+               						 <div class = 'col-xs-2 col-md-4'></div>
+                					 <div class = 'col-xs-4'>
+										<div class="rn-carousel-indicator custom-indicator banner_2_dots" 
+										style = "position:relative; left:150px; bottom:-25px;">
+											<div ng-repeat="slide in slides31" ng-class="{active: $index==$parent.carouselIndex31}" ng-click="$parent.carouselIndex31 = $index"
+												class="owl-dot active" style = "border:none; outline: none;">
+												<span></span>
+											</div>
+										</div>
+										<!-- <div class = 'col-sm-4'>....</div>	 -->
+									</div>
+								</div>		
+							</div>
+						</div>
+
+						<div class="bestsellers_panel panel" ng-init="num2 = 2;" ng-show="num2 == index">
+
+							<!-- Top scored -->
+							<!-- Most liked Slider -->
+
+							<div class="carousel-demo" >
+								<ul style="display:block; height:30vw; "  rn-carousel rn-carousel-index="carouselIndex32" rn-carousel-pause-on-hover
+									rn-carousel-buffered class="carousel2 bestsellers">
+									<li class="banner_2_item" style="display:block; " >
+										<div class="banner_2_item">
+											<div class="banner_2_content">
+												<div class="container ">	
+													<div class="row " >
+														<!-- Best Sellers Item -->
+														<div ng-repeat="prd in scored0" class=" col-lg-4 col-md-6 col-sm-12">
+															<div class="bestsellers_item discount">
+																<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+																	<div class="bestsellers_image"><img ng-src="{{prd.pictures[0]}}" alt=""></div>
+																		<div class="bestsellers_content">
+																			<div class="bestsellers_category"><a ng-href="#/category/{{prd.category.ancestors[0]}}">{{prd.category.ancestors[0]}}</a></div>
+																			<div class="bestsellers_name"><a ng-href="#/product/{{prd._id}}">{{prd.name}}</a></div>
+																			<div class="rating_r {{prd.userrating}} bestsellers_rating">
+																				<i class = "starrating" ng-repeat="star in stars" 
+																				ng-Mouseleave = "leave_stars_l(star,prd)" ng-Mouseover="hover_stars_l(star,prd)" ng-click="set_stars_l(star,prd)"></i></div>
+																			<div class="bestsellers_price discount">{{prd.displayPrice}}<span></span></div>
+																		</div>
+																</div>
+																<div class="bestsellers_fav active"><i class="{{prd.liked}} fa-heart"  ng-click="toggle_like_t(prd)"></i></div>
+																<ul class="bestsellers_marks">
+																	<!-- <li class="bestsellers_mark bestsellers_discount">-25%</li> -->
+																	<li class="bestsellers_mark bestsellers_new">new</li>
+																</ul>
+															</div>
+ 														</div>
+													</div>	
+												</div>
+											</div>
+										</div>		
+					
+										<!-- #{{ slide.id }} -->
+					
+									</li>
+
+									<li class="banner_2_item" style="display:block; " >
+										<div class="banner_2_item">
+											<div class="banner_2_content">
+												<div class="container ">	
+													<div class="row " >
+														<!-- Best Sellers Item -->
+														<div ng-repeat="prd in scored1" class=" col-lg-4 col-md-6 col-sm-12">
+															<div class="bestsellers_item discount">
+																<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+																	<div class="bestsellers_image"><img ng-src="{{prd.pictures[0]}}" alt=""></div>
+																		<div class="bestsellers_content">
+																			<div class="bestsellers_category"><a ng-href="#/category/{{prd.category.ancestors[0]}}">{{prd.category.ancestors[0]}}</a></div>
+																			<div class="bestsellers_name"><a ng-href="#/product/{{prd._id}}">{{prd.name}}</a></div>
+																			<div class="rating_r {{prd.userrating}} bestsellers_rating">
+																				<i class = "starrating" ng-repeat="star in stars" 
+																				ng-Mouseleave = "leave_stars_l(star,prd)" ng-Mouseover="hover_stars_l(star,prd)" ng-click="set_stars_l(star,prd)"></i></div>
+																			<div class="bestsellers_price discount">{{prd.displayPrice}}<span></span></div>
+																		</div>
+																</div>
+																<div class="bestsellers_fav active"><i class="{{prd.liked}} fa-heart"  ng-click="toggle_like_t(prd)"></i></div>
+																<ul class="bestsellers_marks">
+																	<!-- <li class="bestsellers_mark bestsellers_discount">-25%</li> -->
+																	<li class="bestsellers_mark bestsellers_new">new</li>
+																</ul>
+															</div>
+ 														</div>
+													</div>	
+												</div>
+											</div>
+										</div>		
+										<!-- #{{ slide.id }} -->
+									</li>
+									
+								</ul>
+								<div class= 'container' ></div>
+								<div class= 'row' >
+               						 <div class = 'col-xs-2 col-md-4'></div>
+                					 <div class = 'col-xs-4'>
+										<div class="rn-carousel-indicator custom-indicator banner_2_dots" 
+										style = "position:relative; left:150px; bottom:-25px;">
+											<div ng-repeat="slide in slides32" ng-class="{active: $index==$parent.carouselIndex32}" ng-click="$parent.carouselIndex32 = $index"
+												class="owl-dot active" style = "border:none; outline: none;">
+												<span></span>
+											</div>
+										</div>
+										<!-- <div class = 'col-sm-4'>....</div>	 -->
+									</div>
+								</div>		
+							
+							</div>							
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

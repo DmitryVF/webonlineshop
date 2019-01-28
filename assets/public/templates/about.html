@@ -1,0 +1,173 @@
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/blog_single_styles.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/blog_single_responsive.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/blog_styles_custom.css"> -->
+
+<!-- <search-bar></search-bar> -->
+<!-- <main-nav></main-nav> -->
+
+
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/shop_responsive.css"> -->
+
+<!-- Home -->
+<div class="home " >
+<!-- <div class="home " style="overflow: hidden; top:-37px;">     -->
+    <div class="home_background parallax-window" data-parallax="scroll" style=" background-image:url(images/about-code.jpg);"></div>
+    <div class="home_overlay"></div>
+    <div class="home_content d-flex flex-column align-items-center justify-content-center">
+        <h2 class="home_title">{{category._id}}</h2>
+    </div>
+</div>
+
+
+    <!-- Single Blog Post -->
+
+    <div class="single_post">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="single_post_title">About this project</div>
+                    <div class="single_post_title">  </div> <div>Created by Dmitry Filimonoff</div>
+
+                    <div class="single_post_text">
+                        <p>This resource was created for demonstration purposes only.
+                            This website is built using MEAN stack. CSS style theme is based on a free Bootstrap template. jQuery is completely removed from the basic template and rewritten to be compatible with Angular framework. Some vidgets are based on the third-party libraries including Angular-UI-Bootstrap.
+                            All data is stored in MongoDB. Backend part of the project is running on Nodejs. Communication between backend and frontend is performed with Expressjs framework.
+                            Facebook and local login strategies are available.  Password change procedure is implemented using Email request. Other social login strategies are possible. 
+                            Stripe online payment and currency online exchange services are integrated via external APIs.
+
+</p>
+
+                        <div class="single_post_quote text-center">
+                            Please view source project on my  <a href="http://github.com/DmitryVF">github page </a> to get more information and realisation details. 
+                            <!-- <div class="quote_image"><img src="images/quote.png" alt=""></div> -->
+                            <div class="quote_text">
+                                
+                            </div>
+                            <div class="quote_name"></div>
+                        </div>
+
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+<!-- <footer-block></footer-block> -->
+
+ <!-- Newsletter -->
+
+    <div class="newsletter">
+
+            <div class="characteristics">
+                    <div class="container">
+                        <div class="row">
+            
+                           
+                        </div>
+                    </div>
+                </div>
+    </div>  
+    
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 footer_col">
+                    <div class="footer_column footer_contact">
+                        <div class="logo_container">
+                            <div class="logo"><a href="#">WebOnline</a></div>
+                        </div>
+                        <div class="footer_title">Got Question? View our github page</div>
+                        <div class="footer_phone"><a href="http://github.com/DmitryVF">DmitryVF</a></div>
+                        <div class="footer_contact_text">
+                            <p>Making websites for your needs</p>
+                            <p></p>
+                        </div>
+                        <div class="footer_social">
+                            <ul>
+                                <li><a href="http://github.com/DmitryVF"><i class="fab fa-github"></i></a></li>
+                                <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 offset-lg-2">
+                    <div class="footer_column">
+                        <div class="footer_title"></div>
+                        
+                        <!-- <div class="footer_subtitle">Gadgets</div> -->
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="footer_column">
+                        <div class="footer_title"> &nbsp</div>
+                        <ul class="footer_list">
+                            <li ng-repeat="cat in cats2">
+                                <a href="#/category/{{cat._id}}">{{cat._id}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="footer_column">
+                        <div class="footer_title">Pages</div>
+                        <ul class="footer_list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#/category/Books">Categories</a></li>
+                            <li><a href="#/blog_single">Blog</a></li>
+                            <li ng-show="user.user"><a href="#/likes">My wishes</a></li>
+                            <li ng-show="!user.user" uib-popover="Please login to view your Wishes" popover-trigger="'mouseenter'">
+                                <a href="#/login">My wishes</a>
+                            </li>
+                            <li ng-show="user.user"><a href="#/checkout">Cart</a></li>
+                            <li ng-show="!user.user" uib-popover="Please login to view your Cart" popover-trigger="'mouseenter'">
+                                <a href="#/login">Cart</a>
+                            </li>
+                            <li><a href="#/about">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                        <div class="copyright_content"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </div>
+                        <div class="logos ml-sm-auto">
+                            <!-- <ul class="logos_list">
+                                <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

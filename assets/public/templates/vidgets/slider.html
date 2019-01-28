@@ -1,0 +1,48 @@
+<div class="banner_2">
+
+    <div>
+        <div class="carousel-demo" >
+            <ul style="display:block; width: 97vw; height:40vw; margin: 0 auto"  rn-carousel rn-carousel-index="carouselIndex2"  rn-carousel-pause-on-hover
+                rn-carousel-buffered class="carousel2">
+                <li class="banner_2_item" style="display:block; " ng-repeat="slide in slides2 track by slide.id" ng-class="'id-' + slide.id">
+                    <div class="banner_2_item">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-lg-4 col-md-6 ">
+                                    <div class="banner_2_content">
+                                        <div class="banner_2_category">Tablets</div>
+                                        <div class="banner_2_title"><a href="#/product/5bf1c9c6d92b220e273bb64b">iPad Pro</a></div>
+                                        <div class="banner_2_text">Get an exciting experience reading your favourite books on the new device</div>
+                                        
+                                        <div class="button banner_2_button">
+                                            <a href="#/blog_single">Explore</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-8 col-md-6 ">
+                                    <div class="banner_2_image_container">
+                                        <div class="banner_2_image img-fluid">
+                                            <img ng-src="{{slide.img}}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- #{{ slide.id }} -->
+
+                </li>
+            </ul>
+            <div class="rn-carousel-indicator custom-indicator banner_2_dots" >
+                <div ng-repeat="slide in slides2" ng-class="{active: $index==$parent.carouselIndex2}" ng-click="$parent.carouselIndex2 = $index"
+                    class="owl-dot active" style = "border:none; outline: none;">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
