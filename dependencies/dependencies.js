@@ -28,6 +28,11 @@ module.exports = function(wagner) {
       return JSON.parse(fs.readFileSync('./config.json').toString());
     });
   }
+  else{
+    wagner.factory('Config', function() {
+      
+    });
+  }
   
 }; 
  

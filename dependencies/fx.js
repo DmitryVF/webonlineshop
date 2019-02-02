@@ -14,7 +14,7 @@ module.exports = function(Config) {
   };
 
   var url = 'http://openexchangerates.org/api/latest.json?app_id=' +
-    Config.openExchangeRatesKey;
+    openExchangeRatesKey;
   var rates = {
     USD: 1,
     EUR: 0.877,

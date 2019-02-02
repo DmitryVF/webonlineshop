@@ -19,4 +19,4 @@ database/db/*
 database/*
 
 #compiled files
-assets/public/bin/*
+#assets/public/bin/*

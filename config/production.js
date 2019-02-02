@@ -36,8 +36,8 @@ module.exports = {
     },
     landingPage: '/',
     facebook: {
-      clientID: process.env.FACEBOOK_CLIENT_ID,
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+      clientID: process.env.facebookClientId,
+      clientSecret: process.env.facebookClientSecret,
       callbackURL: '/api/auth/facebook/callback',
       enabled: true
     },
