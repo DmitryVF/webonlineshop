@@ -1,5 +1,6 @@
 # Webonlineshop
 MEAN retail app
+https://webonlineshop.herokuapp.com
 
 This resource was created for demonstration purposes only.
 
@@ -10,3 +11,8 @@ All data is stored in MongoDB. Backend part of the project is running on Nodejs.
 Facebook and local login strategies are available.  Password change procedure is implemented using Email request. Other social login strategies are possible. 
 
 Stripe online payment and currency online exchange services are integrated via external APIs.
+
+This app is hosted on Heroku Cloud Application Platform. 
+It's available by link: https://webonlineshop.herokuapp.com.
+(Because of a free tier plan on Heroku this resource loads with additional delay about 3 sec.)
+
