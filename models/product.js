@@ -72,7 +72,8 @@ module.exports = function(db, fx) {
     }
   };
 
-  var schema = new mongoose.Schema(productSchema, {usePushEach: true});
+  var schema = new mongoose.Schema(productSchema);
+  // var schema = new mongoose.Schema(productSchema, {usePushEach: true});
 
   //create index on name field
   
