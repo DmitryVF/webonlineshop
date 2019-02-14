@@ -71,7 +71,7 @@ module.exports = function(db, fx) {
 
     }
   };
-
+mongoose.plugin(schema => { schema.options.usePushEach = true });
   var schema = new mongoose.Schema(productSchema,{usePushEach : true });
   // var schema = new mongoose.Schema(productSchema, {usePushEach: true});
 
