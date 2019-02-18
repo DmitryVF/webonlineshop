@@ -119,13 +119,26 @@ app.config(function($stateProvider) {
     template: require('../public/templates/product_view.html')
   });
 
-  $stateProvider.state({
-    name: 'login',
-    url: '/login',
-    stateparams:{ LoginTemplateUrl :'templates/users/index.html',
-    card:"Log in"},
-    template: '<login-modal></login-modal>'
-  });
+  if (process.env.NODE_ENV != 'production') {
+    $stateProvider.state({
+      name: 'login',
+      url: '/login',
+      stateparams:{ LoginTemplateUrl :'templates/users/index.html',
+      card:"Log in"},
+      template: '<login-modal></login-modal>'
+    });
+  }  
+  else{
+    $stateProvider.state({
+      name: 'login',
+      url: '/login',
+      stateparams:{ LoginTemplateUrl :'templates/users/hello.html',
+      card:"Log in"},
+      template: '<login-modal></login-modal>'
+    });
+  };
+  console.log("process.env.NODE_ENV = "+process.env.NODE_ENV);
+
   $stateProvider.state({
     name: 'signin',
     url: '/signin',
