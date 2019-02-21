@@ -119,7 +119,6 @@ app.config(function($stateProvider) {
     template: require('../public/templates/product_view.html')
   });
 
-  if (process.env.NODE_ENV != 'production') {
     $stateProvider.state({
       name: 'login',
       url: '/login',
@@ -127,17 +126,24 @@ app.config(function($stateProvider) {
       card:"Log in"},
       template: '<login-modal></login-modal>'
     });
-  }  
-  else{
-    $stateProvider.state({
-      name: 'login',
-      url: '/login',
-      stateparams:{ LoginTemplateUrl :'templates/users/hello.html',
-      card:"Log in"},
-      template: '<login-modal></login-modal>'
-    });
-  };
-  console.log("process.env.NODE_ENV = "+process.env.NODE_ENV);
+  // if (process.env.NODE_ENV != 'production') {
+  //   $stateProvider.state({
+  //     name: 'login',
+  //     url: '/login',
+  //     stateparams:{ LoginTemplateUrl :'templates/users/index.html',
+  //     card:"Log in"},
+  //     template: '<login-modal></login-modal>'
+  //   });
+  // }  
+  // else{
+  //   $stateProvider.state({
+  //     name: 'login',
+  //     url: '/login',
+  //     stateparams:{ LoginTemplateUrl :'templates/users/hello.html',
+  //     card:"Log in"},
+  //     template: '<login-modal></login-modal>'
+  //   });
+  // };
 
   $stateProvider.state({
     name: 'signin',

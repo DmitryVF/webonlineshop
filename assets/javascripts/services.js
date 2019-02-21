@@ -66,13 +66,22 @@ exports.$meanConfig = function() {
 }; 
 
 //used in meanio-users in meanUser service
-exports.Global = function() {
+exports.Global = function($http) {
   var Global = {};
+  Global.load = function() {
+    $http.get('/api/v1/global').
+        success(function(data) {
+          Global.data = data;
+          console.log("data = "+JSON.stringify(data));
+          
+        });
+  };  
+  Global.load();
 
   Global.authenticate = function() {
   };
+return Global;
 
-  return Global;
 }; 
 
 exports.$grade = function($http,$rootScope) {

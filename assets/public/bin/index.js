@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0f5c4c61d5e103ef405c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8525eb1735c75c2aeb9b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -863,13 +863,32 @@ app.config(function($stateProvider) {
     template: __webpack_require__(38)
   });
 
-  $stateProvider.state({
-    name: 'login',
-    url: '/login',
-    stateparams:{ LoginTemplateUrl :'templates/users/index.html',
-    card:"Log in"},
-    template: '<login-modal></login-modal>'
-  });
+    $stateProvider.state({
+      name: 'login',
+      url: '/login',
+      stateparams:{ LoginTemplateUrl :'templates/users/index.html',
+      card:"Log in"},
+      template: '<login-modal></login-modal>'
+    });
+  // if (process.env.NODE_ENV != 'production') {
+  //   $stateProvider.state({
+  //     name: 'login',
+  //     url: '/login',
+  //     stateparams:{ LoginTemplateUrl :'templates/users/index.html',
+  //     card:"Log in"},
+  //     template: '<login-modal></login-modal>'
+  //   });
+  // }  
+  // else{
+  //   $stateProvider.state({
+  //     name: 'login',
+  //     url: '/login',
+  //     stateparams:{ LoginTemplateUrl :'templates/users/hello.html',
+  //     card:"Log in"},
+  //     template: '<login-modal></login-modal>'
+  //   });
+  // };
+
   $stateProvider.state({
     name: 'signin',
     url: '/signin',
@@ -3501,9 +3520,9 @@ exports.LikesController = function($scope, $user, $http, $state, $q, $grade, $cs
 
 }; 
 
-exports.NavBarController = function($scope, $user, $window) {
+exports.NavBarController = function($scope, $user, $window, Global) {
   $scope.user = $user;
-
+  Global.load();
   // if ($user.data.provider == "facebook"){
   //   $scope.picture_url = 'http://graph.facebook.com/' +
   //             profile.id.toString() + '/picture?type=large';
@@ -4234,7 +4253,7 @@ module.exports = "\n<header class=\"header\">\n<div class=\"top_bar\">\n  <div c
 /* 13 */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Single Product -->\n\n<div class=\"single_product\">\n  <div class=\"container\">\n    <div class=\"row\">\n\n      <!-- Images -->\n      <div class=\"col-lg-2 order-lg-1 order-2\">\n        <ul class=\"image_list\" >\n          <li ng-click= \"image_selected =product.pictures[0]\"><img ng-src=\"{{product.pictures[0]}}\" alt=\"\"></li>\n          <li ng-click= \"image_selected =product.pictures[1]\"><img ng-src=\"{{product.pictures[1]}}\" alt=\"\"></li>\n          <li ng-click= \"image_selected =product.pictures[2]\"><img ng-src=\"{{product.pictures[2]}}\" alt=\"\"></li>\n        </ul>\n      </div>\n\n      <!-- Selected Image -->\n      <div class=\"col-lg-5 order-lg-2 order-1\">\n        <div class=\"image_selected\"><img  ng-src=\"{{image_selected}}\" alt=\"\"></div>\n      </div>\n\n      <!-- Description -->\n      <div class=\"col-lg-5 order-3\">\n        <div class=\"product_description\">\n          <div class=\"product_category\"><a ng-href=\"#/category/{{product.category.ancestors[0]}}\">{{product.category.ancestors[0]}}</a></div>\n          <div class=\"product_name\">{{product.name}}</div>\n\n          <div class=\"rating_r {{prd.userrating}} product_rating\">\n                                        <i class = \"starrating\" ng-repeat=\"star in stars\" \n                                        ng-Mouseleave = \"leave_stars(star,prd)\" ng-Mouseover=\"hover_stars(star,prd)\" ng-click=\"set_stars(star,prd)\"></i></div>\n          \n          <div class=\"order_info d-flex flex-row\">\n            <!-- <form action=\"#\"> -->\n            <div>\n              <div class=\"clearfix\" style=\"z-index: 1000;\">\n\n                <!-- Product Quantity -->\n                <div class=\"product_quantity clearfix\">\n                  <span>Quantity: </span>\n                  <input ng-disabled=\"true\" style = \"background: transparent;\" id=\"quantity_input\" type=\"text\" pattern=\"[1-9]*\" value={{quant}}>\n                  <div class=\"quantity_buttons\" ng-init = \"quant = 1\">\n                    <div id=\"quantity_inc_button\" ng-click = \"quant=quant+1;\" class=\"quantity_inc quantity_control\"><i class=\"fas fa-chevron-up\"></i></div>\n                    <div id=\"quantity_dec_button\" ng-click = \"quant= quant <= 1 ? 1 : quant=quant-1;\" class=\"quantity_dec quantity_control\"><i class=\"fas fa-chevron-down\"></i></div>\n                  </div>\n                </div>\n\n                \n\n              </div>\n              \n              <div class=\"product_price\">{{product.displayPrice}}</div>\n              <div class=\"button_container\">\n                <add-to-cart></add-to-cart>\n                <!-- <button type=\"button\" class=\"button cart_button\">Add to Cart</button> -->\n                <div ng-click=\"toggle_like(prd)\" class=\"product_fav active\"><i class=\"{{prd.liked}} fa-heart\"  ></i></div>\n                <!-- <div class=\"product_fav\"><i class=\"fas fa-heart\"></i></div> -->\n              </div>\n            </div>  \n            <!-- </form> -->\n          </div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n</div> -->\n\n"
+module.exports = "<!-- Single Product -->\n\n<div class=\"single_product\">\n  <div class=\"container\">\n    <div class=\"row\">\n\n      <!-- Images -->\n      <div class=\"col-lg-2 order-lg-1 order-2\">\n        <ul class=\"image_list\" >\n          <li ng-click= \"image_selected =product.pictures[0]\"><img ng-src=\"{{product.pictures[0]}}\" alt=\"\"></li>\n          <li ng-click= \"image_selected =product.pictures[1]\"><img ng-src=\"{{product.pictures[1]}}\" alt=\"\"></li>\n          <li ng-click= \"image_selected =product.pictures[2]\"><img ng-src=\"{{product.pictures[2]}}\" alt=\"\"></li>\n        </ul>\n      </div>\n\n      <!-- Selected Image -->\n      <div class=\"col-lg-5 order-lg-2 order-1\">\n        <div class=\"image_selected\"><img  ng-src=\"{{image_selected}}\" alt=\"\"></div>\n      </div>\n\n      <!-- Description -->\n      <div class=\"col-lg-5 order-3\">\n        <div class=\"product_description\">\n          <div class=\"product_category\"><a ng-href=\"#/category/{{product.category.ancestors[0]}}\">{{product.category.ancestors[0]}}</a></div>\n          <div class=\"product_name\">{{product.name}}</div>\n\n          <div class=\"rating_r {{prd.userrating}} product_rating\">\n                                        <i class = \"starrating\" ng-repeat=\"star in stars\" \n                                        ng-Mouseleave = \"leave_stars(star,prd)\" ng-Mouseover=\"hover_stars(star,prd)\" ng-click=\"set_stars(star,prd)\"></i></div>\n          \n          <div class=\"order_info d-flex flex-row\">\n            <!-- <form action=\"#\"> -->\n            <div>\n              <div class=\"clearfix\" style=\"z-index: 1000;\">\n\n                <!-- Product Quantity -->\n                <div class=\"product_quantity clearfix\">\n                  <span>Quantity: </span>\n                  <input ng-disabled=\"true\" style = \"background: transparent;\" id=\"quantity_input\" type=\"text\" pattern=\"[1-9]*\" value={{quant}}>\n                  <div class=\"quantity_buttons\" ng-init = \"quant = 1\">\n                    <div id=\"quantity_inc_button\" ng-click = \"quant=quant+1;\" class=\"quantity_inc quantity_control\"><i class=\"fas fa-chevron-up\"></i></div>\n                    <div id=\"quantity_dec_button\" ng-click = \"quant= quant <= 1 ? 1 : quant=quant-1;\" class=\"quantity_dec quantity_control\"><i class=\"fas fa-chevron-down\"></i></div>\n                  </div>\n                </div>\n\n                \n\n              </div>\n              \n              <div class=\"product_price\">{{product.displayPrice}}</div>\n              <div class=\"button_container\">\n                <add-to-cart></add-to-cart>\n                <!-- <button type=\"button\" class=\"button cart_button\">Add to Cart</button> -->\n                <div ng-click=\"toggle_like(prd)\" class=\"product_fav active\"><i class=\"{{prd.liked}} fa-heart\"  ></i></div>\n                <!-- <div class=\"product_fav\"><i class=\"fas fa-heart\"></i></div> -->\n              </div>\n            </div>  \n            <!-- </form> -->\n          </div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 /* 14 */
@@ -4350,13 +4369,22 @@ exports.$meanConfig = function() {
 }; 
 
 //used in meanio-users in meanUser service
-exports.Global = function() {
+exports.Global = function($http) {
   var Global = {};
+  Global.load = function() {
+    $http.get('/api/v1/global').
+        success(function(data) {
+          Global.data = data;
+          console.log("data = "+JSON.stringify(data));
+          
+        });
+  };  
+  Global.load();
 
   Global.authenticate = function() {
   };
+return Global;
 
-  return Global;
 }; 
 
 exports.$grade = function($http,$rootScope) {
@@ -7012,7 +7040,8 @@ angular.module('mean.users')
       $scope.socialButtonsCounter = 0;
       $scope.global = Global;
       $scope.$state = $state;
-
+      console.log('Global = '+JSON.stringify(Global));
+      // setTimeout(function() {console.log('Global = '+JSON.stringify(Global));}, 1000); 
       $http.get('/api/get-config')
         .then(function(response) {
           var config = response.data;

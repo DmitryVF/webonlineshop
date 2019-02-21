@@ -6,14 +6,27 @@
       <ul class="social">
         <li ng-repeat="(key, val) in socialButtons" class="social_icon social_icon_{{key}}">
         <span>  </span>
-          <a target="_self" ng-href="/api/auth/{{key}}" class="">
+  
+          <a ng-show="!global.data.NODE_ENV" target="_self" ng-href="/api/auth/{{key}}" class="">
             <span class="text-capitalize">Log in with {{key}}</span>
           </a> 
+
+          <a ng-show="global.data.NODE_ENV == 'production'"
+            popover-placement = 'bottom-left' popover-class = 'popover-on-top'
+          uib-popover="This app is hosted on a free Heroku service. Free Heroku plan doesn't provide connection over HTTPS. Facebook auth API requires HTTPS protocol in prodution mode to login. This link works in development mode only when app is launched localy." popover-trigger="'mouseenter'"
+          target="_self" href="" class="">
+            <span class="text-capitalize">Log in with {{key}}</span>
+          </a> 
+
         </li>
       </ul>
       </md-card-actions>
   </div>
+  <br/>&nbsp;
+    <br/>&nbsp;
+    <br/>&nbsp;
   <div class="row">
+
     <!-- <span flex></span> -->
       <md-button ui-sref="register">Register</md-button>
       <md-button ui-sref="signin">Sign in</md-button>

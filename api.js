@@ -402,7 +402,11 @@ module.exports = function(wagner) {
         exec(handleMany.bind(null, 'products', res));
     };
   }));
-
+  api.get('/global', function(req, res) {
+    console.log("process.env.NODE_ENV = "+JSON.stringify(process.env.NODE_ENV));
+    res.json({ NODE_ENV: process.env.NODE_ENV}); 
+   });
+  
   return api;
 };
 

@@ -267,9 +267,9 @@ exports.LikesController = function($scope, $user, $http, $state, $q, $grade, $cs
 
 }; 
 
-exports.NavBarController = function($scope, $user, $window) {
+exports.NavBarController = function($scope, $user, $window, Global) {
   $scope.user = $user;
-
+  Global.load();
   // if ($user.data.provider == "facebook"){
   //   $scope.picture_url = 'http://graph.facebook.com/' +
   //             profile.id.toString() + '/picture?type=large';

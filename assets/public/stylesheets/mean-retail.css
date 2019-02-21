@@ -703,3 +703,9 @@ margin: 6px;
 .shop_sidebar{
   margin: 35px;
 }
+.popover-on-top{
+  z-index: 100;
+  width: 100% !important;
+  margin: 0px;
+  font-size: 13px;
+}
