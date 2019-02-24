@@ -705,7 +705,7 @@ margin: 6px;
 }
 .popover-on-top{
   z-index: 100;
-  width: 100% !important;
+  width: 90% !important;
   margin: 0px;
   font-size: 13px;
 }
