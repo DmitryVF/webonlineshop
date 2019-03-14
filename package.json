@@ -57,7 +57,7 @@
     "test": "mocha test.js",
     "watch": "gulp watch",
     "build-production": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors",
-    "build": "webpack"
+    "buildw": "webpack"
   },
   "engines": {
     "node": "8.10.0"
