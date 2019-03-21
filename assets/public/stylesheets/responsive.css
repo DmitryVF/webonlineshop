@@ -848,12 +848,23 @@
 	margin:2px;
 	height:380px !important;
 	}	
-  ul.bestsellers {
+  /*ul.bestsellers {
     overflow-y: auto !important;
   } 
 	
-
-
+  div.carousel-demo{
+  	overflow-y: visible;
+  	overflow-x:visible;
+  }*/
+  div.banner_2_scroll
+  {
+  	overflow-y: auto !important;
+  	height: 100%;
+  }
+  	/*DeBuG*/
+/*еще один див добавить чтоб точки видно но чтоб скрол както был
+если нет то лелать для разных браузеров по разному и все!
+*/
 }
 
 @media only screen and (max-width: 768px)

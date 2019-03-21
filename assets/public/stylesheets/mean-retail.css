@@ -514,6 +514,12 @@ color: blue;
   padding-bottom: 10px;
   /* text-overflow: clip | ellipsis; */
 }
+div.viewed_list{
+  height: 100%;
+  overflow-y: auto !important;  
+  overflow-x: hidden; !important;  
+}
+
 
 .viewed_name{
   height:45px;
